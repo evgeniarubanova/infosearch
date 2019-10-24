@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Поисковик</title>
+	 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<!-- Bootstrap Core CSS -->
+    	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+	<style>
+	h1.header {
+	color:#E8DFC8;
+	}
+	.descr {
+	color: white
+	}
+	
+	p {font-size: 13pt}
+	
+	ul {list-style: none}
+	
+	li {margin-bottom: 10px}
+	
+	</style>
+	
+	</head>
+	<body>
+	
+		<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+			<div class="container"> 
+				
+				<nav class="collapse navbar-collapse" id="bs-navbar"> 
+					<ul class="nav navbar-nav navbar-right"> 
+						<li> <a href="/">Главная страница</a> </li> 
+					</ul>
+				</nav> 
+			</div>
+		</nav>
+
+		<header style="background-color:#FF7F50; padding-top:10px; "> 
+			<div class="container"> 
+				<div class="row">
+					<div class="col-md-16">
+						<br/><br/>
+						<h1 class="descr">Найденные предложения и значения их релевантности</h1>
+	                </div>
+	            </div>
+			</div>
+		</header>
+
+		<section id="portfolio">
+			<div class="container" >
+				<ol>
+				<br>
+				{% for r in result %} 
+				<li>{{r[1]}}  {{r[0]}}</li>
+				<br>
+				{% endfor %} 
+				</ol>
+			</div>
+		</section>
+		<footer class="bs-docs-footer"> 
+			<div class="container"> 
+				<p style="text-align:right; ">Итоговый проект по курсу Инфопоиск 2019. Рубанова Евгения, НИУ ВШЭ БКЛ 161. <a href = "https://github.com/evgeniarubanova/infosearch">Ссылка на github</a></p> 
+			</div>
+		</footer>	
+		
+	</body>
+</html>
